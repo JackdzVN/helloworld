@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thế giới di động Pha kè</title>
+    <style>
+      .container-header-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .container-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        top: 0;
+        left: 0;
+      }
+      .logo {
+        width: 142px;
+        margin-top: 5px;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+      }
+      .khuyen-mai {
+        color: #fff;
+        font-size: 11px;
+      }
+      .TP {
+        color: #fee500;
+        font-size: 11px;
+        margin-top: 3px;
+      }
+      .TP span::after {
+        content: "";
+        border-top: 5px solid #ffe500;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-bottom: 2px;
+      }
+      .search-site {
+        height: 30px;
+        width: 200px;
+        background-color: #fff;
+        margin-left: 10px;
+        border-radius: 5px;
+        position: relative;
+      }
+      .toinput {
+        height: 25px;
+        width: 145px;
+        margin-left: 15px;
+        margin-top: 2px;
+        border: 0px solid #fff;
+      }
+      .imgsearch {
+        width: 25px;
+        position: absolute;
+        right: 5px;
+        top: 3px;
+      }
+      .icon-gio-hang {
+        width: 20px;
+        height: 20px;
+        margin-bottom: -2px;
+      }
+      .store {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 30px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        margin-top: 2px;
+        width: 97px;
+        height: 30px;
+      }
+      .gio-hang {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 5px;
+        margin-top: 2px;
+      }
+      body {
+        background-color: #c6e6f1;
+      }
+      body {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url(./img/bg-top-min.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+      .banner-left {
+        position: fixed;
+        top: 120px;
+        left: 69.5px;
+      }
+      .banner-right {
+        position: fixed;
+        top: 120px;
+        right: 69.5px;
+      }
+      .history {
+        align-self: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+      .lich-su {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+      .logo-bhx {
+        width: 100px;
+        height: 15px;
+        margin-left: 50px;
+      }
+      .giam-gia {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+      .sale {
+        color: #ffe500;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .container-header-store {
+        width: 100%;
+        height: 40px;
+        background-color: #fee500;
+        position: fixed;
+        top: 40px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dien-thoai {
+        width: 35px;
+      }
+      .dt-text {
+        font-size: 15px;
+      }
+      .pc-xach-tay {
+        margin-left: 30px;
+        width: 35px;
+      }
+      .lap-text {
+        font-size: 15px;
+        margin-left: 5px;
+      }
+      .bang-ve {
+        margin-left: 30px;
+        width: 35px;
+      }
+      .tablet-text {
+        font-size: 15px;
+        margin-left: 5px;
+      }
+      .phu-kien {
+        margin-left: 30px;
+        width: 35px;
+      }
+      .accessary-text {
+        font-size: 15px;
+        margin-left: 5px;
+      }
+      .dong-ho-thong-minh {
+        margin-left: 30px;
+        width: 35px;
+      }
+      .smart-clock-text {
+        font-size: 15px;
+        margin-left: 5px;
+      }
+      .pc-mayin {
+        margin-left: 30px;
+        width: 35px;
+      }
+      .pc-text {
+        font-size: 15px;
+        margin-left: 5px;
+      }
+      .poster {
+        margin-top: 90px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+        border-radius: 5px;
+        border: 1px solid red;
+      }
+      .poster-1 {
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+        border-radius: 5px;
+        border: 1px solid red;
+      }
+      .mua-hang {
+        border: 1px solid red;
+        width: 1100px;
+        height: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+        background-color: #fff;
+      }
+      .gia-soc {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+      }
+      .san-pham {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 430px;
+      }
+      .oppo {
+        width: 200px;
+      }
+      .iphone {
+        width: 200px;
+      }
+      .samsung {
+        width: 200px;
+      }
+      .vivo {
+        width: 200px;
+      }
+      .realme {
+        width: 200px;
+      }
+      .san-pham-oppo {
+        display: flex;
+        flex-direction: column;
+      }
+      .san-pham-oppo #oppo-name {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      #du-kien {
+        margin-left: 20px;
+        color: rgb(255,0,0)
+      }
+      .san-pham-iphone {
+        display: flex;
+        flex-direction: column;
+      }
+      #iphone-name {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      #prices {
+        margin-left: 20px;
+        color: rgb(255,0,0)
+      }
+      .san-pham-samsung {
+        display: flex;
+        flex-direction: column;
+      }
+      #samsung-name {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      #prices-1 {
+        margin-left: 20px;
+        color: rgb(255,0,0)
+      }
+      .san-pham-vivo {
+        display: flex;
+        flex-direction: column;
+      }
+      #vivo-name {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      #prices-2 {
+        margin-left: 20px;
+        color: rgb(255,0,0)
+      }
+      .san-pham-realme {
+        display: flex;
+        flex-direction: column;
+      }
+      #realme-name {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+      #prices-3 {
+        margin-left: 20px;
+        color: rgb(255,0,0)
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-header-main">
+      <div class="container-header">
+        <img
+          class="logo"
+          src="./img/logo.png"
+          alt=""
+        />
+        <div class="header">
+          <span class="khuyen-mai">Xem giá, khuyến mãi tại</span>
+          <div class="TP">
+            <span> Hồ Chí Minh </span>
+          </div>
+        </div>
+        <form class="search-site" action="/tim-kiem">
+          <input class="toinput" placeholder="Bạn Tìm Gì..." />
+          <img
+            class="imgsearch"
+            src="./img/pngtree-vector-search-icon-png-image_320926.png"
+            alt=""
+          />
+        </form>
+        <div class="store">
+          <img class="icon-gio-hang" src="./img/store.png" alt="" />
+          <span class="gio-hang">Giỏ hàng</span>
+        </div>
+        <div class="lich-su">
+          <span class="history">Lịch sử</span>
+          <span class="history">Mua hàng</span>
+        </div>
+        <img class="logo-bhx" src="./img/logo-bhx.png" alt="" />
+        <div class="giam-gia">
+          <span class="sale">giảm đến 50% +</span>
+          <span class="sale">5 lần FREE ship</span>
+        </div>
+      </div>
+      <div class="container-header-store">
+        <img
+          class="dien-thoai"
+          src="./img/1200px-Smartphone_icon_-_Noun_Project_283536.svg.png"
+          alt=""
+        />
+        <span class="dt-text">Điện thoại</span>
+        <img class="pc-xach-tay" src="./img/59505.png" alt="" />
+        <span class="lap-text">Laptop</span>
+        <img class="bang-ve" src="./img/31138.png" alt="" />
+        <span class="tablet-text">Tablet</span>
+        <img class="phu-kien" src="./img/tainghe.png" alt="" />
+        <span class="accessary-text">Phụ kiện</span>
+        <img class="dong-ho-thong-minh" src="./img/07-512.png" alt="" />
+        <span class="smart-clock-text">Đồng hồ thông minh</span>
+        <img class="pc-mayin" src="./img/pc.png" alt="" />
+        <span class="pc-text">PC, Máy in</span>
+      </div>
+    </div>
+    <img class="banner-left" src="./img/banner-left.png" alt="" />
+    <img class="banner-right" src="./img/banner-right.png" alt="" />
+    <div class="container-body">
+      <img
+        class="poster"
+        src="./img/xa-kho-smartwatch-800-300-800x300.png"
+        alt=""
+      />
+      <img class="poster-1" src="./img/xa-kho-1200-75-1200x75.png" alt="" />
+      <div class="mua-hang">
+        <img class="gia-soc" src="./img/giasoc.png" alt="" />
+        <div class="san-pham">
+          <div class="san-pham-oppo">
+            <img class="oppo" src="./img/OPPO-Reno5-trang-600x600.jpg" alt="" />
+            <span id="oppo-name">OPPO Reno5</span>
+            <span id="du-kien">Dự kiến: 8.990.000₫</span>
+          </div>
+          <div class="san-pham-iphone">
+            <img class="iphone" src="./img/iphone-12-trang-new-600x600-600x600.jpg" alt="">
+            <span id="iphone-name">Iphone 12 128GB</span>
+            <span id="prices">24.990.000₫</span>
+          </div>
+          <div class="san-pham-samsung">
+            <img class="samsung" src="./img/samsung-galaxy-a10s-xanh-600x600.jpg" alt="">
+            <span id="samsung-name">Samsung Galaxy A10s</span>
+            <span id="prices-1">2.490.000₫</span>
+          </div>
+          <div class="san-pham-vivo">
+            <img class="vivo" src="./img/vivo-v20-(4).jpg" alt="">
+            <span id="vivo-name">Vivo V20</span>
+            <span id="prices-2">7.990.000₫</span>
+          </div>
+          <div class="san-pham-realme">
+            <img class="realme" src="./img/realme-7-(10).jpg" alt="">
+            <span id="realme-name">Realme 7</span>
+            <span id="prices-3">6.690.000₫</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
